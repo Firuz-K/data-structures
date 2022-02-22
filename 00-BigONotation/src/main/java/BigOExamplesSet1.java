@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class BigOExamplesSet1 {
     public static void main(String[] args) {
         int n=10000;
@@ -57,5 +59,8 @@ public class BigOExamplesSet1 {
         endTime=System.currentTimeMillis();
         System.out.println("Number of Operations in Task #5 O(log n)= "+ numberOfOperations + " in "+ (endTime-startTime));
         // Task 5 End...................
+
+
+        ArrayList<String> list = new ArrayList<>();
     }
 }

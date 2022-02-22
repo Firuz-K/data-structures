@@ -8,6 +8,8 @@ public class TwoSum {
         System.out.println(Arrays.toString(twoSum1(myarray,9)));
         System.out.println("Optimal Solution .....");
         System.out.println(Arrays.toString(twoSum2(myarray,9)));
+        System.out.println("Two Pointer Solution .....");
+        System.out.println(Arrays.toString(twoSumTwoPointer(myarray,9)));
 
     }
     public static int[] twoSum1(int[] array, int target){
@@ -31,6 +33,22 @@ public class TwoSum {
         }
         return new int[]{};
     }
+
+    public static int[] twoSumTwoPointer(int[] array, int target){
+
+        Arrays.sort(array);
+        int i =0;
+        int j = array.length - 1;
+        while( i <j){
+            int sum = array[i] + array[j];
+            if(sum == target) return  new int[]{i,j};
+            else if( sum< target) i++;
+            else j--;
+        }
+        return new int[]{};
+    }
+
+
 
 
 }
